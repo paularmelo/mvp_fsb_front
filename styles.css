@@ -1,0 +1,161 @@
+body,
+ul,
+li {
+    font-family: tahoma;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(194, 47, 138);
+}
+
+header {
+    background-color: rgb(194, 33, 117);
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.title {
+    color: white;
+    width: 100%;
+    background-color: rgb(194, 53, 105);
+    display: inline-block;
+    padding: 2px 0px;
+    position: sticky;
+    top: 0px;
+}
+
+.banner {
+    height: 300px;
+    overflow: hidden;
+}
+
+.banner img {
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+}
+
+.newItem {
+    background-color: rgb(238, 56, 162);
+    padding: 30px 40px;
+    color: rgb(26, 21, 21);
+    display: flex;
+    justify-content: center;
+}
+
+.newItem:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#newInput {
+    margin: 0;
+    border: 1px solid rgb(194, 86, 95);
+    width: 25%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#newQuantity {
+    margin: 0;
+    border: 1px solid rgb(35, 32, 24);
+    width: 8%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#newPrice {
+    margin: 0;
+    border: 1px solid rgb(35, 32, 24);
+    width: 5%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+.addBtn {
+    padding: 9px 10px;
+    background-color: rgb(231, 215, 171);
+    color: rgb(54, 30, 30);
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.addBtn:hover {
+    background-color: #2aa5b5;
+    color: white;
+}
+
+.items {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.close:hover {
+    color: #46f436;
+    font-weight: bolder;
+}
+
+.detail:hover {
+    color: #46f436;
+    font-weight: bolder;
+}
+
+.itemsIngredientes {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 10px;
+    font-size: 18px;
+    transition: 0.2s;
+    text-align: start;
+}
+
+table {
+    background-color: rgb(158, 145, 145);
+    width: 50%;
+}
+
+tr:nth-child(odd) {
+    background-color: #eee;
+}
+
+th:nth-child(1) {
+    width: 80%;
+}
+
+tr:hover {
+    background: rgb(200, 199, 199);
+}
+
+textarea {
+    width: 95%;
+    padding-left: 10px;
+    height: 200px;
+    line-height: 30px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.newIngrediente {
+    background-color: rgb(238, 56, 162);
+    padding: 30px 40px;
+    color: rgb(22, 19, 19);
+    display: flex;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Minhas Receitas</title>
+</head>
+
+<body>
+    <!-- Cabeçalho de informações do sistema -->
+    <header>
+        <div class="title">
+            <h2>Caderno de Receitas</h2>
+        </div>
+        <div class="banner">
+            <img src="ingredientes_3.jpg" alt="y">
+        </div>
+    </header>
+
+    <!-- Opções -->
+    <section class="opcoes">
+        <span onclick="openAba('newItem')" class="addBtn">Nova Receita</span>
+        <span onclick="openAba('listReceitas')" class="addBtn">Minhas Receitas</span>
+    </section>
+
+    <!-- Adicionar um novo item -->
+    <div id="newItem" class="w3-container op_receitas" style=" display:none">
+        <section class="newItem">
+            <div>
+                <label for="fname">Titulo:</label>
+                <input type="text" id="newTitulo" name="Titulo"><br>
+
+                <fieldset>
+                    <legend>Status:</legend>
+                    <div id="status">
+                        <input type="radio" id="AP" name="newStatus" value="Aprovada">Aprovada
+                        <input type="radio" id="RE" name="newStatus" value="Reprovada">Reprovada
+                        <input type="radio" id="NT" name="newStatus" value="Não testada" checked="checked">Não testada
+                    </div>
+                </fieldset>
+                <label for="fname">Categoria:</label>
+                <div id="categoria">
+                    <input type="radio" id="DOCE" name="newCategoria" value="Doce">Doce
+                    <input type="radio" id="SAL" name="newCategoria" value="Salgado">Salgado
+                </div>
+
+                <fieldset>
+                    <legend>Modo de Preparo:</legend>
+                    <textarea type="text" id="newPreparo" name="Modo de Preparo"></textarea>
+                </fieldset>
+
+                <legend>Ingredientes:</legend>
+                <section class="newIngrediente">
+                    <input type="text" id="newDescricao" placeholder="Descricao:">
+                    <input type="text" id="newQtd" placeholder="Quantidade:">
+                    <input type="text" id="newUnidade" placeholder="Unidade Medida:">
+                    <span onclick="newIngrediente()" class="addBtn">Adicionar</span>
+                </section>
+
+                <!-- Tabela com items existentes -->
+                <section class="itemsIngredientes">
+                    <table id="myIngredientes">
+                        <tr>
+                            <th>Descrição</th>
+                            <th>Quantidade</th>
+                            <th>Unidade Medida</th>
+                        </tr>
+                    </table>
+                </section>
+
+                <span id="Salvar" onclick="newItem()" class="addBtn">Salvar</span>
+                <span id="Voltar" onclick="voltar()" class="addBtn">Voltar</span>
+            </div>
+        </section>
+    </div>
+
+    <!-- Tabela com items existentes -->
+    <div id="listReceitas" class="w3-container op_receitas" style=" display:none">
+        <section class="items">
+            <table id="myTable">
+                <tr>
+                    <th style="width:10px">ID</th>
+                    <th>Titulo</th>
+                    <th>Categoria</th>
+                    <th>Status</th>
+                    <th>Detalhe</th>
+                    <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px">
+                </tr>
+            </table>
+
+        </section>
+    </div>
+    <!-- Tabela com as receitas preferidas-->
+    <div id="preferidas" class="w3-container op_receitas" style=" display:none">
+
+    </div>
+
+    <script>
+        function openAba(abaName) {
+            var i;
+            var x = document.getElementsByClassName("op_receitas");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(abaName).style.display = "block";
+        }
+    </script>
+
+    <script src="scripts.js"></script>
+</body>
+
+
+</html>
